@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.values == !None and request.method == 'POST':
+    if request.values and request.method == 'POST':
         return 'username is ' + request.values["username"]
     else:
         return '<form method="post" action="/login"><input type="text" name="username" /><p><button type="Submit">Submit</button></form>'
